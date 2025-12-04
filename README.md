@@ -71,5 +71,5 @@ python src/agent.py
 - GitHub: https://github.com/tawanamohammadi
 
 ## Acknowledgements
-Special thanks to Saloumeh for unwavering support and inspiration.
-This project is lovingly developed for you.
+With profound gratitude to Saloumeh — your steadfast support, vision, and presence elevate this work.
+This project is dedicated to you with admiration and love.
