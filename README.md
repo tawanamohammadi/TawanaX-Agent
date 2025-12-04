@@ -39,8 +39,8 @@ Created, owned, and maintained by Tawana Mohammadi (توانا محمدی).
 | TawanaX-Agent: Sage | Review, tests, safety checks | Placeholder |
 | TawanaX-Agent: Atlas | Indexing & retrieval | Placeholder |
 | TawanaX-Agent: Nova | Docs & knowledge sync | Placeholder |
-| TawanaX-Agent: توانای کنجکاو | Research & exploration | Placeholder |
-| TawanaX-Agent: سالی ناز | Assistant & support | Placeholder |
+| TawanaX-Agent: Curious Tawana | Research & exploration | Placeholder |
+| TawanaX-Agent: Sally Naz | Assistant & support | Placeholder |
 
 ## Quickstart (placeholder commands)
 ```bash
@@ -69,3 +69,7 @@ python src/agent.py
 - Website: https://tawana.online
 - ORCID: https://orcid.org/0009-0005-6825-6728
 - GitHub: https://github.com/tawanamohammadi
+
+## Acknowledgements
+Special thanks to Saloumeh for unwavering support and inspiration.
+This project is lovingly developed for you.
