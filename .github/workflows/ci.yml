@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile Python sources
+        run: |
+          python - <<'PY'
+          import py_compile, glob
+          files = glob.glob('src/**/*.py', recursive=True)
+          for f in files:
+              py_compile.compile(f, doraise=True)
+          print(f"Compiled {len(files)} files")
+          PY
+      - name: Lint placeholder
+        run: echo "TODO: add linting (ruff/flake8)"
+

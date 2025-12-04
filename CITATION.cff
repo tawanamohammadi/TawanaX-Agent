@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+title: TawanaX-Agent
+message: "If you use this project, please cite."
+authors:
+  - family-names: Mohammadi
+    given-names: Tawana
+    name: Tawana Mohammadi
+    aliases:
+      - توانا محمدی
+license: MIT
+url: https://github.com/tawanamohammadi/TawanaX-Agent
+
