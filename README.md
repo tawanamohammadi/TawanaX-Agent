@@ -39,6 +39,8 @@ Created, owned, and maintained by Tawana Mohammadi (توانا محمدی).
 | TawanaX-Agent: Sage | Review, tests, safety checks | Placeholder |
 | TawanaX-Agent: Atlas | Indexing & retrieval | Placeholder |
 | TawanaX-Agent: Nova | Docs & knowledge sync | Placeholder |
+| TawanaX-Agent: توانای کنجکاو | Research & exploration | Placeholder |
+| TawanaX-Agent: سالی ناز | Assistant & support | Placeholder |
 
 ## Quickstart (placeholder commands)
 ```bash
