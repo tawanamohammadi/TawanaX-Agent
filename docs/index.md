@@ -34,7 +34,7 @@ const MAX_ITEMS = 12;
 function cardHTML(e){
   const repo = e.repo?.name || "unknown-repo";
   const when = new Date(e.created_at).toLocaleString();
-  let title = e.type.replace("Event","{}");
+  let title = e.type.replace("Event","");
 
   let details = "";
   if(e.type === "PushEvent"){
@@ -70,4 +70,3 @@ loadActivity();
 </script>
 
 <div style="margin-top:2rem;color:#666;font-size:13px">TawanaX is a Tawana Network project by Tawana Mohammadi.</div>
-

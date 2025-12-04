@@ -6,6 +6,12 @@ Created, owned, and maintained by Tawana Mohammadi (توانا محمدی).
 
 ⚠️ Work in Progress — detailed documentation, releases, and benchmarks are coming soon.
 
+## Brand & Hierarchy
+- Tawana Network is the parent brand.
+- TawanaX is a sub-project under Tawana Network.
+- TawanaX-Bot is a suite of multiple specialized agents under TawanaX.
+- This repo is the mother project for TawanaX agents.
+
 ## Why TawanaX-Agent?
 - Multi-stage, modular AI tooling for real-world coding workflows
 - Clean architecture with planners, coders, reviewers, indexers, docs
@@ -61,4 +67,3 @@ python src/agent.py
 - Website: https://tawana.online
 - ORCID: https://orcid.org/0009-0005-6825-6728
 - GitHub: https://github.com/tawanamohammadi
-
