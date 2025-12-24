@@ -728,7 +728,7 @@
             <ul class="nav-links">
                 <li><a href="#agents">Agents</a></li>
                 <li><a href="#architecture">Architecture</a></li>
-                <li><a href="#dashboard">Dashboard</a></li>
+
                 <li><a href="#activity">Activity</a></li>
                 <li><a href="#energy">Energy Circle</a></li>
             </ul>
@@ -759,9 +759,65 @@
                 <a href="https://github.com/tawanamohammadi/TawanaX-Agent" class="btn btn-primary" target="_blank">
                     🚀 Get Started
                 </a>
-                <a href="#architecture" class="btn btn-secondary">
-                    📖 Learn More
+                <a href="#agents" class="btn btn-secondary">
+                    📖 Explore Agents
                 </a>
+            </div>
+
+            <!-- Integrated Dashboard -->
+            <div style="margin-top: 60px; width: 100%; animation: fadeInUp 0.8s ease 0.6s both;">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <span class="hero-badge" style="background: rgba(10, 10, 15, 0.6);">
+                        <span class="dot" style="background: var(--accent-blue);"></span>
+                        <span id="visitor-greeting">Initializing Live Intelligence...</span>
+                    </span>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Weather Widget -->
+                    <div class="dashboard-card" id="weather-card">
+                        <div class="dash-icon">🌤️</div>
+                        <h3>Weather — Kurdistan</h3>
+                        <div id="weather-data" class="dash-content">Loading...</div>
+                    </div>
+
+                    <!-- World Clocks -->
+                    <div class="dashboard-card">
+                        <div class="dash-icon">🕐</div>
+                        <h3>World Clocks</h3>
+                        <div class="clocks-grid" id="world-clocks">
+                            <div class="clock-item"><span class="clock-city">Tehran</span><span class="clock-time"
+                                    id="clock-tehran">--:--</span></div>
+                            <div class="clock-item"><span class="clock-city">New York</span><span class="clock-time"
+                                    id="clock-ny">--:--</span></div>
+                            <div class="clock-item"><span class="clock-city">London</span><span class="clock-time"
+                                    id="clock-london">--:--</span></div>
+                            <div class="clock-item"><span class="clock-city">Tokyo</span><span class="clock-time"
+                                    id="clock-tokyo">--:--</span></div>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Stats -->
+                    <div class="dashboard-card">
+                        <div class="dash-icon">📊</div>
+                        <h3>GitHub Stats</h3>
+                        <div id="github-stats" class="stats-grid">
+                            <div class="stat-item"><span class="stat-value" id="stat-repos">--</span><span
+                                    class="stat-label">Repos</span></div>
+                            <div class="stat-item"><span class="stat-value" id="stat-followers">--</span><span
+                                    class="stat-label">Followers</span></div>
+                            <div class="stat-item"><span class="stat-value" id="stat-stars">--</span><span
+                                    class="stat-label">Stars</span></div>
+                        </div>
+                    </div>
+
+                    <!-- AI News -->
+                    <div class="dashboard-card wide">
+                        <div class="dash-icon">🤖</div>
+                        <h3>Latest AI News</h3>
+                        <div id="ai-news" class="news-list">Loading AI news...</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -940,62 +996,7 @@
         </div>
     </section>
 
-    <!-- Live Dashboard Section -->
-    <section id="dashboard" class="section">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="section-label">🌍 Live Dashboard</span>
-                <h2 class="section-title">Real-Time Intelligence</h2>
-                <p class="section-subtitle" id="visitor-greeting">Loading your location...</p>
-            </div>
 
-            <div class="dashboard-grid">
-                <!-- Weather Widget -->
-                <div class="dashboard-card reveal" id="weather-card">
-                    <div class="dash-icon">🌤️</div>
-                    <h3>Weather — Kurdistan</h3>
-                    <div id="weather-data" class="dash-content">Loading...</div>
-                </div>
-
-                <!-- World Clocks -->
-                <div class="dashboard-card reveal">
-                    <div class="dash-icon">🕐</div>
-                    <h3>World Clocks</h3>
-                    <div class="clocks-grid" id="world-clocks">
-                        <div class="clock-item"><span class="clock-city">Tehran</span><span class="clock-time"
-                                id="clock-tehran">--:--</span></div>
-                        <div class="clock-item"><span class="clock-city">New York</span><span class="clock-time"
-                                id="clock-ny">--:--</span></div>
-                        <div class="clock-item"><span class="clock-city">London</span><span class="clock-time"
-                                id="clock-london">--:--</span></div>
-                        <div class="clock-item"><span class="clock-city">Tokyo</span><span class="clock-time"
-                                id="clock-tokyo">--:--</span></div>
-                    </div>
-                </div>
-
-                <!-- GitHub Stats -->
-                <div class="dashboard-card reveal">
-                    <div class="dash-icon">📊</div>
-                    <h3>GitHub Stats</h3>
-                    <div id="github-stats" class="stats-grid">
-                        <div class="stat-item"><span class="stat-value" id="stat-repos">--</span><span
-                                class="stat-label">Repos</span></div>
-                        <div class="stat-item"><span class="stat-value" id="stat-followers">--</span><span
-                                class="stat-label">Followers</span></div>
-                        <div class="stat-item"><span class="stat-value" id="stat-stars">--</span><span
-                                class="stat-label">Stars</span></div>
-                    </div>
-                </div>
-
-                <!-- AI News -->
-                <div class="dashboard-card wide reveal">
-                    <div class="dash-icon">🤖</div>
-                    <h3>Latest AI News</h3>
-                    <div id="ai-news" class="news-list">Loading AI news...</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <style>
         .dashboard-grid {
