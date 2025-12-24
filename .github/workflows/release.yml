@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate Release Notes
+        id: notes
+        run: |
+          TAG=${GITHUB_REF#refs/tags/}
+          PREV_TAG=$(git describe --tags --abbrev=0 $TAG^ 2>/dev/null || echo "")
+          
+          echo "# 🌳 TawanaX-Agent $TAG" > RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "## What's Changed" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          
+          if [ -n "$PREV_TAG" ]; then
+            git log $PREV_TAG..$TAG --oneline --pretty="* %s" >> RELEASE_NOTES.md
+          else
+            git log --oneline --pretty="* %s" -20 >> RELEASE_NOTES.md
+          fi
+          
+          echo "" >> RELEASE_NOTES.md
+          echo "## 🤖 Agents Status" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "| Agent | Status |" >> RELEASE_NOTES.md
+          echo "|-------|--------|" >> RELEASE_NOTES.md
+          echo "| 🌳 TawRoot | In Development |" >> RELEASE_NOTES.md
+          echo "| 💜 Saloumeh | In Development |" >> RELEASE_NOTES.md
+          echo "| 🔌 Tawana Proxy | Planned |" >> RELEASE_NOTES.md
+          echo "| 🌐 Tawana Network | Planned |" >> RELEASE_NOTES.md
+          echo "| 🔍 Curious Tawana | Planned |" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "---" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "**Full Changelog**: https://github.com/tawanamohammadi/TawanaX-Agent/compare/$PREV_TAG...$TAG" >> RELEASE_NOTES.md
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: RELEASE_NOTES.md
+          draft: false
+          prerelease: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
